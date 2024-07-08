@@ -1,0 +1,259 @@
+/* Reset styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  background: #071e2e;
+}
+
+/* Header section styles */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Poppins;
+  gap: 70px;
+  padding: 32px 142px;
+  padding-bottom: 1px;
+}
+
+/* Header title styling */
+.header-title {
+  color: #fff;
+  font-size: 30px;
+}
+
+/* Navigation links */
+.nav-link {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Individual link styling */
+.nav-link a {
+  color: white;
+  text-decoration: none;
+  position: relative; /* Necessary for the underline effect */
+}
+
+/* Underline hover effect */
+.nav-link a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #03adea;
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+/* Hover effect for the links */
+.nav-link a:hover::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+/* Active link styling */
+.nav-link .active {
+  color: #03adea;
+}
+.active{
+  color: yellow;
+}
+/* Content section styles */
+.content-work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  margin-bottom: 20px; /* Added margin-bottom */
+}
+
+/* Content title styling */
+.content-title {
+  color: rgb(26, 163, 122);
+  align-self: stretch;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 84px;
+  gap: 64px;
+}
+
+/* Work grid styles */
+.work-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  /*margin-bottom: 20px; /* Optional: Add margin-bottom here instead */
+}
+.work-links {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+  position: absolute;
+}
+/* Individual work item styles */
+.work-item {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Smooth zoom transition */
+
+  /* transition: box-shadow 0.3s ease; */
+  position: relative; /* Add this for inner image zooming */
+}
+
+/* Work item hover effect */
+.work-item:hover {
+  box-shadow: 0 0 15px grey;
+}
+
+/* Work image styles */
+.work-item img {
+  width: 100%;
+  height: 100%;
+  border: 2px solid blue;
+  object-fit: cover;
+}
+
+/* Work item image zoom effect */
+.work-item:hover {
+  transform: scale(1.1); /* Scale up the image */
+}
+
+/* Work links styles */
+.work-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* General social icon styles */
+.social-icon {
+  width: 30px; /* Adjust the width as needed */
+  height: auto; /* Keeps the aspect ratio */
+}
+
+/* Header section styles */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Poppins;
+  gap: 70px;
+  padding: 32px 142px;
+  padding-bottom: 1px;
+}
+
+/* Footer section styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0c2c43;
+  gap: 50px;
+  color: #1aa1ff;
+}
+
+/* Footer title styles */
+.footer-title {
+  font-size: 24px;
+  gap: 12px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  gap: 10px;
+  background-color: #071e2e;
+  margin: 0;
+  border-top: 2px solid #1aa1ff;
+}
+
+/* Social icons styles */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+/* Social icon hover styles */
+.social-icons a:hover {
+  transform: translateY(-3px);
+}
+
+.Line {
+  width: 1157px;
+  height: 1px;
+  background: #283f4f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav-link {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .nav-link a {
+    font-size: 16px;
+  }
+
+  header ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-section {
+    padding: 10px;
+  }
+
+  .nav-link {
+    gap: 10px;
+  }
+
+  .header-title {
+    font-size: 20px;
+  }
+
+  .nav-link a {
+    font-size: 14px;
+  }
+
+  header ul {
+    gap: 10px;
+  }
+}
