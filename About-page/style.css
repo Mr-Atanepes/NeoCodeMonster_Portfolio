@@ -1,282 +1,265 @@
-/* Reset styles */
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Body styles */
 body {
-  background: #2e2a49;
+    background-color: #26355D;
 }
 
-/* Header section styles */
-.header-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: Poppins, sans-serif;
-  gap: 70px;
-  padding: 32px 142px;
-  padding-bottom: 1px;
+:root {
+    --main-color: #1b85d1;
+    --secondary-color: #FFDB00;
+    --text-color: #50B498;
+    --background-color: #FF8F00;
 }
 
-/* Header title styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Poppins;
+    padding: 32px 142px;
+    gap: 64px;
+    padding-bottom: 64px;
+}
+
 .header-title {
-  color: #fff;
-  font-size: 30px;
+    color: var(--text-color);
+    font-size: 30px;
 }
 
-/* Navigation links */
 .nav-link {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  gap: 30px;
-  align-items: center;
+    list-style: none;
+    display: flex;
+    gap: 10px;
 }
 
-/* Individual link styling */
 .nav-link a {
-  color: white;
-  text-decoration: none;
-  position: relative; /* Necessary for the underline effect */
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
 }
 
-/* Underline hover effect */
 .nav-link a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  display: block;
-  margin-top: 5px;
-  right: 0;
-  background: #03adea;
-  transition: width 0.3s ease;
-  -webkit-transition: width 0.3s ease;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: var(--secondary-color);
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
 }
 
-/* Hover effect for the links */
 .nav-link a:hover::after {
-  width: 100%;
-  left: 0;
-  right: auto;
+    width: 100%;
+    left: 0;
+    right: auto;
 }
 
-/* Active link styling */
-.nav-link .active {
-  color: #03adea;
+.nav-link a:hover {
+    color: var(--secondary-color);
 }
 
-/* Logo styling */
-.logo-img {
-  color: white;
-  font-size: 40px;
-}
-
-/* General active link styling */
 .active {
-  color: #03adea;
+    color: var(--secondary-color);
 }
 
-/* Header unordered list styles */
-header ul {
-  font-family: "Poppins", sans-serif;
-  color: white;
-  list-style: none;
-  display: flex;
-  gap: 10px;
-  font-size: 18px;
+.content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    padding: 32px 142px;
+    padding-bottom: 121px;
 }
+
+.content-about-me {
+    align-self: stretch;
+    color: var(--text-color);
+    text-align: center;
+    padding-bottom: 32px;
+
+    /* Heading/H1/Semi-Bold/Normal */
+    font-family: var(--typography-typeface-change-font-here-heading, Poppins);
+    font-size: var(--Typography-Size-LG-4x, 64px);
+    font-style: normal;
+    font-weight: var(--Typography-Weight-Semi-Bold, 600);
+    line-height: var(--Typography-Height-LG-4x, 84px); /* 131.25% */
+}
+
+.content-about-desc {
+    color: var(--text-color);
+    text-align: center;
+
+    /* Body/MD/Regular/Normal */
+    font-family: var(--typography-typeface-change-font-here-body, Poppins);
+    font-size: var(--Typography-Size-MD, 18px);
+    font-style: normal;
+    font-weight: var(--Typography-Weight-Regular, 400);
+    line-height: var(--Typography-Height-SM, 28px); /* 155.556% */
+}
+
+.content-image {
+    display: flex;
+    width: 217px;
+    height: 198px;
+    padding-top: 19px;
+    /* justify-content: center; */
+    align-items: center;
+    /* background-size: center; */
+    border-radius: var(--radius-radius-infinity, 9999px);
+    background-color: var(--secondary-color);
+    background-image: url("./file3.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.main-btn {
+    width: 151px;
+    border-radius: 8px;
+    background: var(--secondary-color);
+    height: 40px;
+    color: var(--Component-Text-component-text-light-fixed, #fff);
+    text-align: center;
+
+    /* Body/MD/Regular/Normal */
+    font-family: var(--typography-typeface-change-font-here-body, Poppins);
+    font-size: var(--Typography-Size-MD, 18px);
+    font-style: normal;
+    font-weight: var(--Typography-Weight-Regular, 400);
+    line-height: var(--Typography-Height-SM, 28px); /* 155.556% */
+}
+
+.second-btn {
+    width: 151px;
+    border-radius: 8px;
+    height: 40px;
+    background: #071e2e;
+    border: 1.5px solid var(--secondary-color);
+    color: var(--secondary-color);
+    text-align: center;
+
+    /* Body/MD/Regular/Normal */
+    font-family: var(--typography-typeface-change-font-here-body, Poppins);
+    font-size: var(--Typography-Size-MD, 18px);
+    font-style: normal;
+    font-weight: var(--Typography-Weight-Regular, 400);
+    line-height: var(--Typography-Height-SM, 28px); /* 155.556% */
+}
+
 .exp-layout {
-  display: flex;
-  gap: 50px;
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
 }
 
 .exp-title {
-  font-size: 64px;
-  font-weight: 600;
-  writing-mode: sideways-rl;
+    font-size: 34px;
+    font-weight: 600;
+    margin: 0 !important;
+    font-family: "Poppins";
+    color: var(--text-color);
 }
 
-.exp-item {
-  padding: 0 20px;
-  display: flex;
-  gap: 10px;
-}
-
-.exp-item-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.experience-item {
+    display: flex;
+    /* flex-direction: column; */
 }
 
 .circle {
-  width: 22px;
-  height: 27px;
-  background-color: var(--secondary-color);
-  border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
 }
 
 .border {
-  width: 3px;
-  height: 100%;
-  background-color: var(--secondary-color);
+    width: 3px;
+    height: 100%;
+    background-color: var(--secondary-color);
 }
 
-.exp-layout {
-  display: flex;
-  gap: 50px;
-}
-.exp-title {
-  font-size: 64px;
-  font-weight: 600;
-  writing-mode: sideways-rl;
-}
-.exp-item-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.exp-text-head {
-  font-size: 24px;
-  font-weight: 600;
-  color: white;
-  font-family: "Poppins";
-  line-height: 52px;
-}
-
-.exp-text-doc {
-  font-size: 18px;
-  font-weight: 400;
-  color: white;
-  margin-bottom: 24px;
-  font-family: "Poppins";
-}
-
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .header-section {
+.experience-item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    padding: 20px;
-  }
-
-  .nav-link {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .header-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .nav-link a {
-    font-size: 16px;
-  }
-
-  header ul {
-    flex-direction: column;
-    gap: 15px;
-  }
+    margin-right: 20px;
 }
 
-@media (max-width: 480px) {
-  .header-section {
-    padding: 10px;
-  }
+.about-item {
+    width: 315px;
+    color: #fff;
 
-  .nav-link {
-    gap: 10px;
-  }
-
-  .header-title {
-    font-size: 20px;
-  }
-
-  .nav-link a {
-    font-size: 14px;
-  }
-
-  header ul {
-    gap: 10px;
-  }
+    /* Heading/H2/Medium/Normal */
+    font-family: var(--typography-typeface-change-font-here-heading, Poppins);
+    font-size: var(--Typography-Size-LG-3x, 48px);
+    font-style: normal;
+    font-weight: var(--Typography-Weight-Medium, 500);
+    line-height: var(--Typography-Height-LG-3x, 64px); /* 133.333% */
 }
 
-/* Footer section styles */
-.footer-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: stretch;
-  gap: 10px;
-  margin: 0;
-  border-top: 2px solid #1aa1ff;
+.experience-title {
+    color: var(--text-color);
+
+    /* Heading/H3/Semi-Bold/Normal */
+    font-family: var(--typography-typeface-change-font-here-heading, Poppins);
+    font-size: var(--Typography-Size-LG-2x, 24px);
+    font-style: normal;
+    font-weight: var(--Typography-Weight-Semi-Bold, 600);
+    line-height: var(--Typography-Height-LG, 52px); /* 216.667% */
 }
 
-/* Footer title styles */
+.experience-job {
+    color: var(--text-color);
+
+    /* Body/MD/Regular/Normal */
+    font-family: var(--typography-typeface-change-font-here-body, Poppins);
+    font-size: var(--Typography-Size-MD, 18px);
+    font-style: normal;
+    font-weight: var(--Typography-Weight-Regular, 400);
+    line-height: var(--Typography-Height-SM, 28px); /* 155.556% */
+    margin-bottom: 24px;
+}
+
 .footer-title {
-  font-size: 24px;
-  gap: 12px;
-  color: #1aa1ff;
+    color: var(--secondary-color);
+
+    /* Body/MD/Regular/Normal */
+    font-family: var(--typography-typeface-change-font-here-body, Poppins);
+    font-size: var(--Typography-Size-MD, 18px);
+    font-style: normal;
+    font-weight: var(--Typography-Weight-Regular, 400);
+    line-height: var(--Typography-Height-SM, 28px); /* 155.556% */
 }
 
-/* Social icons styles */
 .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
 }
 
-/* Social icon hover styles */
-.social-icons a:hover {
-  transform: translateY(-3px);
-}
-.about-me-section {
-  /* Styling for the entire section */
-  color: #fff;
-
-}
-
-.profile-image-container {
-  /* Styling for the profile image container */
-}
-
-.profile-image-container img {
-  /* Styling for the profile image itself */
-}
-
-.bio {
-  /* Styling for the bio text container */
-}
-
-.section-title {
-  /* Styling for the section title "About Me" */
-}
-
-.bio-text {
-  /* Styling for the biography text */
-}
-
-.cta-buttons {
-  /* Styling for the container of call-to-action buttons */
-}
-
-.hire-me-btn,
-.lets-talk-btn {
-  /* Styling for both "Hire me" and "Let's Talk" buttons */
-}
-
-.hire-me-btn {
-  /* Additional specific styling for "Hire me" button if needed */
-}
-
-.lets-talk-btn {
-  /* Additional specific styling for "Let's Talk" button if needed */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    padding: 96px;
 }

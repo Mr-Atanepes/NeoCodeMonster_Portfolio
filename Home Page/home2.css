@@ -9,14 +9,17 @@
 body {
   background: var(--main-color);
   font-family: "Poppins";
+  color: var(--text-color); /* Use the text color variable */
 }
+
 :root {
   --main-color: #071e2e;
   --secondary-color: #03adea;
   --third-color: #fff;
+  --text-color: white; /* Default text color */
 }
-/* Header section styles */
 
+/* Header section styles */
 .header-section {
   display: flex;
   justify-content: space-between;
@@ -29,7 +32,7 @@ body {
 
 /* Header title styling */
 .header-title {
-  color: #fff;
+  color: var(--text-color); /* Use the text color variable */
   font-size: 30px;
 }
 
@@ -44,9 +47,9 @@ body {
 
 /* Individual link styling */
 .nav-link a {
-  --third-color: white;
   text-decoration: none;
   position: relative; /* Necessary for the underline effect */
+  color: var(--text-color); /* Use the text color variable */
 }
 
 /* Underline hover effect */
@@ -71,22 +74,18 @@ body {
 }
 
 /* Active link styling */
-/* .nav-link .active {
-  color: #03adea;
-} */
-
-.logo-img {
-  color: white;
-  font-size: 40px;
-}
-
 .active {
   color: #03adea;
 }
 
+.logo-img {
+  color: var(--text-color); /* Use the text color variable */
+  font-size: 40px;
+}
+
 header ul {
   font-family: "Poppins";
-  color: white;
+  color: var(--text-color); /* Use the text color variable */
   list-style: none;
   display: flex;
   gap: 10px;
@@ -103,7 +102,7 @@ header ul {
 .content-title {
   font-size: 64px;
   font-weight: 600;
-  color: white;
+  color: var(--text-color); /* Use the text color variable */
   font-family: "Poppins";
   align-self: stretch;
   display: flex;
@@ -116,7 +115,7 @@ header ul {
 }
 
 .content-doc2 {
-  color: white;
+  color: var(--text-color); /* Use the text color variable */
   font-family: "Poppins";
   font-size: 18px;
   font-style: normal;
@@ -126,9 +125,11 @@ header ul {
   display: flex;
   padding: 32px;
 }
+
 .content-doc1 {
   color: #03adea;
 }
+
 /* Button container styles */
 .btn-container {
   display: flex;
@@ -139,7 +140,7 @@ header ul {
 /* Main button styles */
 .main-btn {
   background-color: #03adea;
-  color: white;
+  color: var(--text-color); /* Use the text color variable */
   border: 1px solid #03adea;
   padding: 12px 20px; /* Adjust padding for better button size */
   border-radius: 20px;
@@ -163,7 +164,7 @@ header ul {
 /* Hover effects for main button */
 .main-btn:hover {
   background-color: #0284b1; /* Darker shade of blue on hover */
-  color: white;
+  color: var(--text-color); /* Use the text color variable */
 }
 
 /* Hover effects for secondary button */
@@ -173,7 +174,7 @@ header ul {
 }
 
 .footer-text {
-  color: #1aa1ff;
+  color: var(--text-color); /* Use the text color variable */
   font-size: 18px;
   line-height: 28px;
   font-family: "Poppins";
@@ -186,6 +187,7 @@ header ul {
   align-items: flex-start;
   flex-direction: row;
 }
+
 /* Footer section styles */
 footer {
   text-align: center;
@@ -195,20 +197,11 @@ footer {
 
 /* Footer title styles */
 .footer-title {
-  color: #1aa1ff;
+  color: var(--text-color); /* Use the text color variable */
   font-size: 24px;
   gap: 12px;
 }
 
-/* .footer-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  align-self: stretch;
-} */
-
-/* Social icons styles */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -251,50 +244,47 @@ footer {
   align-self: stretch;
 }
 
-/* Footer title styles */
-.footer-title {
-  color: #1aa1ff;
-  font-size: 24px;
-  gap: 12px;
-}
-
-/* Social icons styles */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 10px;
-}
-
-/* Social icon hover styles */
-.social-icons a:hover {
-  transform: translateY(-3px);
-}
 .label {
-  width: 300px;
-  height: 100%;
-  position: relative;
-  background-color: gray;
-  box-shadow: inset 0px 5px 10px rgb(111, 110, 110);
-  border-radius: 20px;
-}
-.label img {
-  width: 40px;
-}
-.label::after {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  background-color: orange;
-}
-@media only screen and (max-width: 600px) {
-  .content {
-    flex-direction: column;
+    width: 80px !important;
+    height: 30px;
+    padding: 5px;
+    box-shadow: inset 0px 5px 10px rgb(61, 61, 61);
+    position: relative;
+    border-radius: 20px;
+    display: block;
+    background-color: rgb(247, 247, 247);
   }
-}
+  .label::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 2px;
+    left: 2.5px;
+    border-radius: 50%;
+    z-index: 1;
+    background-color: rgb(244, 188, 84);
+  }
+  
+  .label img {
+    z-index: 9999;
+    position: absolute;
+    width: 20px;
+  }
+  .moon {
+    left: 50px;
+  }
+  #mode {
+    visibility: hidden;
+  }
+  #mode:checked + label {
+    background-color: rgb(54, 53, 53);
+  }
+  #mode:checked + label::after {
+    left: 49px;
+    background-color: rgb(135, 131, 131);
+  }
+  
 /* Responsive styles */
 @media (max-width: 768px) {
   .header-section {
@@ -343,7 +333,157 @@ footer {
     gap: 10px;
   }
 }
+
 .name {
   color: slateblue;
   font-size: 25px;
 }
+
+
+
+  .checkbox-wrapper-55 input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+    box-shadow: inset rgb(111, 110, 110);
+  }
+
+  .checkbox-wrapper-55 *,
+  .checkbox-wrapper-55 ::after,
+  .checkbox-wrapper-55 ::before {
+    box-sizing: border-box;
+  }
+
+  .checkbox-wrapper-55 .rocker {
+    display: inline-block;
+    position: relative;
+    /*
+    SIZE OF SWITCH
+    ==============
+    All sizes are in em - therefore
+    changing the font-size here
+    will change the size of the switch.
+    See .rocker-small below as example.
+    */
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #888;
+    width: 7em;
+    height: 4em;
+    overflow: hidden;
+    border-bottom: 0.5em solid #eee;
+  }
+
+  .checkbox-wrapper-55 .rocker-small {
+    font-size: 0.75em;
+  }
+
+  .checkbox-wrapper-55 .rocker::before {
+    content: "";
+    position: absolute;
+    top: 0.5em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #999;
+    border: 0.5em solid #eee;
+    border-bottom: 0;
+  }
+
+  .checkbox-wrapper-55 .switch-left,
+  .checkbox-wrapper-55 .switch-right {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5em;
+    width: 3em;
+    transition: 0.2s;
+    user-select: none;
+  }
+
+  .checkbox-wrapper-55 .switch-left {
+    height: 2.4em;
+    width: 2.75em;
+    left: 0.85em;
+    bottom: 0.4em;
+    background-color: #ddd;
+    transform: rotate(15deg) skewX(15deg);
+  }
+
+  .checkbox-wrapper-55 .switch-right {
+    right: 0.5em;
+    bottom: 0;
+    background-color: #e5ed53;
+    color: #fff;
+  }
+
+  .checkbox-wrapper-55 .switch-left::before,
+  .checkbox-wrapper-55 .switch-right::before {
+    content: "";
+    position: absolute;
+    width: 0.4em;
+    height: 2.45em;
+    bottom: -0.45em;
+    background-color: #ccc;
+    transform: skewY(-65deg);
+  }
+
+  .checkbox-wrapper-55 .switch-left::before {
+    left: -0.4em;
+  }
+
+  .checkbox-wrapper-55 .switch-right::before {
+    right: -0.375em;
+    background-color: transparent;
+    transform: skewY(65deg);
+  }
+
+  .checkbox-wrapper-55 input:checked + .switch-left {
+    background-color: #535252;
+    color: #fff;
+    bottom: 0px;
+    left: 0.5em;
+    height: 2.5em;
+    width: 3em;
+    transform: rotate(0deg) skewX(0deg);
+  }
+
+  .checkbox-wrapper-55 input:checked + .switch-left::before {
+    background-color: transparent;
+    width: 3.0833em;
+  }
+
+  .checkbox-wrapper-55 input:checked + .switch-left + .switch-right {
+    background-color: #ddd;
+    color: #888;
+    bottom: 0.4em;
+    right: 0.8em;
+    height: 2.4em;
+    width: 2.75em;
+    transform: rotate(-15deg) skewX(-15deg);
+  }
+
+  .checkbox-wrapper-55 input:checked + .switch-left + .switch-right::before {
+    background-color: #ccc;
+  }
+
+  /* Keyboard Users */
+  .checkbox-wrapper-55 input:focus + .switch-left {
+    color: #333;
+  }
+
+  .checkbox-wrapper-55 input:checked:focus + .switch-left {
+    color: #fff;
+  }
+
+  .checkbox-wrapper-55 input:focus + .switch-left + .switch-right {
+    color: #fff;
+  }
+
+  .checkbox-wrapper-55 input:checked:focus + .switch-left + .switch-right {
+    color: #333;
+  }
+
